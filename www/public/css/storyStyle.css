@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("img/rpgBackground2.jpg");
+    background-color: #060f2d;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 70% 40%;
+    background-repeat: no-repeat;
+    position: relative;
+    font-family: fantasy;
+}
+
+nav {
+    background: #060f2d;
+    height: 80px;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10px;
+    border-radius: 4px;
+    opacity: 95%;
+}
+
+label.logo {
+    color: #ffffff;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: lighter;
+    opacity: 100%;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,a:hover {
+    background: rgba(255, 255, 255, 0.16);
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.article {
+    width: 90%;
+    margin-left: 5%;
+    background-color: rgba(6, 15, 45, 0.52);
+}
+
+h2 {
+    font-size: 30px;
+    color: white;
+    line-height: 44px;
+    padding: 20px 0px 0px 20px;
+}
+
+p {
+    color: white;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 20px 20px 0px 20px;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 40%;
+    margin: 20px 5%;
+}
+
+.dropbtn {
+    background-color: rgba(31, 46, 87, 0.84);
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    font-family: fantasy;
+    text-transform: uppercase;
+    border: none;
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: rgba(15, 21, 54, 0.91);}
+
+@media (max-width: 1058px) {
+    .wrapper {
+        width: 600px;
+    }
+
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+    .button {
+        width: 100%;
+        margin: 20px 0px 0px 0px;
+    }
+
+    .dropdown {
+        width: 60%;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 90%;
+        height: 100vh;
+        background: rgba(2, 2, 47, 0.7);
+        border-radius: 4px;
+        top: 100px;
+        left: -100%;
+        visibility: hidden;
+        opacity: 0;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover,a.active {
+        background: none;
+        color: #1a2f86;
+    }
+    #check:checked ~ ul {
+        left: 5%;
+        opacity: 100%;
+        visibility: visible;
+    }
+    .button {
+        margin: 0px 0px 0px 0px;
+    }
+
+    .dropdown {
+        width: 90%;
+    }
+}
